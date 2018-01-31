@@ -1,3 +1,4 @@
+var paths = require('path');
 module.exports = {
     entry : './entry.js',
     output : {
@@ -11,6 +12,15 @@ module.exports = {
                 use: [
                     'style-loader',
                     'css-loader'
+                ]
+            },
+            {
+                test: /\.sass$/,
+                include: paths.appSrc,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
                 ]
             }
         ]
