@@ -1,2 +1,3 @@
-require('./style.css')
+
+require('./style.sass')
 document.write('hello');
